@@ -21,7 +21,7 @@ class Tuling extends AbstractMessageHandler
     public $name = 'tuling';
     public $zhName = '图灵机器人';
     public $author = '雪风';
-    public $version = '1.2';
+    public $version = '1.0';
     public $baseExtensions = [
         Http::class,
     ];
