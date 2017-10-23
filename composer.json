@@ -1,0 +1,27 @@
+{
+  "name": "oiuv/tuling",
+  "description": "Vbot 自动聊天机器人",
+  "keywords": [
+    "Vbot",
+    "图灵机器人",
+    "聊天机器人"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Xuefeng",
+      "email": "i@oiuv.cn"
+    }
+  ],
+  "require": {
+    "vbot/http": "^1.0"
+  },
+  "require-dev": {
+    "hanson/vbot": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vbot\\Tuling\\": "src/"
+    }
+  }
+}
