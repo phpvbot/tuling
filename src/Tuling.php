@@ -8,7 +8,6 @@
 
 namespace Vbot\Tuling;
 
-
 use Hanson\Vbot\Console\Console;
 use Hanson\Vbot\Extension\AbstractMessageHandler;
 use Hanson\Vbot\Message\Text;
@@ -21,7 +20,7 @@ class Tuling extends AbstractMessageHandler
     public $name = 'tuling';
     public $zhName = '图灵机器人';
     public $author = '雪风';
-    public $version = '1.0';
+    public $version = '1.0.1';
     public $baseExtensions = [
         Http::class,
     ];
@@ -29,12 +28,12 @@ class Tuling extends AbstractMessageHandler
     public function register()
     {
         $default_config = [
-            'status'        => false,   //默认关闭机器人
+            'status'        => true,
             'api'           => 'http://www.tuling123.com/openapi/api',
             'key'           => '2b700ebfec6593f3e2f452b3bcb8be6e',
             'error_message' => '图灵机器人失灵了，暂时没法陪聊了，T_T！',
         ];
-        $this->config = array_merge($default_config, $this->config);
+        $this->config = array_merge($default_config, $this->config ?? []);
         $this->status = $this->config['status'];
     }
 
